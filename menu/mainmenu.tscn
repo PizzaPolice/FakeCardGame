@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkikq3qfs3l6o"]
+
+[sub_resource type="GDScript" id="1"]
+script/source = "extends Button
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+func _pressed():
+	pass
+
+"
+
+[sub_resource type="GDScript" id="2"]
+script/source = "extends Button
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+func _pressed():
+	get_tree().quit()
+"
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 120.0
+offset_top = 80.0
+offset_right = -120.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Fake Card Game"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+
+[node name="Start Game" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Start Game"
+flat = true
+script = SubResource("1")
+
+[node name="Deck Editor" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Deck Editor
+"
+flat = true
+
+[node name="Tutorial" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Tutorial
+"
+flat = true
+
+[node name="Options" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Options"
+flat = true
+
+[node name="Exit" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Exit"
+flat = true
+script = SubResource("2")
