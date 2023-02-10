@@ -54,36 +54,36 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Fake Card Game"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="MainMenuButtons" type="VBoxContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
 
-[node name="Start Game" type="Button" parent="VBoxContainer2"]
+[node name="Start Game" type="Button" parent="MainMenuButtons"]
 layout_mode = 2
 text = "Start Game"
 flat = true
 script = SubResource("1")
 
-[node name="Deck Editor" type="Button" parent="VBoxContainer2"]
+[node name="Deck Editor" type="Button" parent="MainMenuButtons"]
 layout_mode = 2
 text = "Deck Editor
 "
 flat = true
 
-[node name="Tutorial" type="Button" parent="VBoxContainer2"]
+[node name="Tutorial" type="Button" parent="MainMenuButtons"]
 layout_mode = 2
 text = "Tutorial
 "
 flat = true
 
-[node name="Options" type="Button" parent="VBoxContainer2"]
+[node name="Options" type="Button" parent="MainMenuButtons"]
 layout_mode = 2
 text = "Options"
 flat = true
 
-[node name="Exit" type="Button" parent="VBoxContainer2"]
+[node name="Exit" type="Button" parent="MainMenuButtons"]
 layout_mode = 2
 text = "Exit"
 flat = true

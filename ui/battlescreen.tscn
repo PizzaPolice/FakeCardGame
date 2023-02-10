@@ -1,3 +1,57 @@
-[gd_scene format=3 uid="uid://0cf303droub5"]
+[gd_scene load_steps=2 format=3 uid="uid://0cf303droub5"]
+
+[ext_resource type="Texture2D" uid="uid://clu4naqeyrr6" path="res://graphics/card/card_placeholder/AceSpades.png" id="1_bicys"]
 
 [node name="battlescreen" type="Node2D"]
+
+[node name="UserInterface" type="MarginContainer" parent="."]
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 1840.0
+offset_bottom = 1020.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Top UI" type="MarginContainer" parent="UserInterface"]
+layout_mode = 2
+
+[node name="HealthBars" type="HBoxContainer" parent="UserInterface/Top UI"]
+layout_mode = 2
+
+[node name="PlayerHealth" type="ProgressBar" parent="UserInterface/Top UI/HealthBars"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnemyHealth" type="ProgressBar" parent="UserInterface/Top UI/HealthBars"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AtkDef" type="HBoxContainer" parent="UserInterface/Top UI"]
+layout_mode = 2
+
+[node name="EnemyHand" type="MarginContainer" parent="UserInterface"]
+layout_mode = 2
+
+[node name="Player Hand" type="MarginContainer" parent="UserInterface"]
+layout_mode = 2
+
+[node name="EnemyDeckContainer" type="MarginContainer" parent="UserInterface"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_top = 100
+
+[node name="TextureButton" type="TextureButton" parent="UserInterface/EnemyDeckContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_bicys")
+
+[node name="PlayerDeckContainer" type="MarginContainer" parent="UserInterface"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="PlayerDeck" type="TextureButton" parent="UserInterface/PlayerDeckContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_bicys")
